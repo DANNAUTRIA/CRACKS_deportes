@@ -1,912 +1,881 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRACKS DEPORTES | Catálogo Oficial de Réplicas AAA</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            dark: '#07090d',
-                            card: '#0e131f',
-                            border: '#1e293b',
-                            neon: '#00ff88',
-                            neonHover: '#00cc6a',
-                            accent: '#10b981'
-                        }
-                    }
-                }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRACKS DEPORTES | Catálogo Oficial de Indumentaria Futbolera</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            pitch: {
+              950: '#060a0f',
+              900: '#0b131c',
+              800: '#121e2c',
+              700: '#1b2b3e',
+              600: '#283e58'
+            },
+            crackGreen: {
+              DEFAULT: '#10b981',
+              neon: '#00ff88',
+              glow: '#34d399',
+              dark: '#059669'
+            },
+            silver: {
+              DEFAULT: '#cbd5e1',
+              bright: '#f8fafc',
+              dark: '#64748b'
             }
+          },
+          fontFamily: {
+            stadium: ['Montserrat', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
         }
-    </script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Outfit', sans-serif;
-            background-color: #07090d;
-            color: #f8fafc;
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(0, 255, 136, 0.05) 0%, transparent 50%),
-                linear-gradient(to right, rgba(30, 41, 59, 0.1) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(30, 41, 59, 0.1) 1px, transparent 1px);
-            background-size: 100% 100%, 40px 40px, 40px 40px;
-        }
-        .neon-glow {
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
-        }
-        .neon-glow-hover:hover {
-            box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #07090d;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1e293b;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #00ff88;
-        }
-    </style>
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #060a0f;
+      color: #f8fafc;
+      /* Champions Ball / Hexagonal Pattern Overlay in Green Glow */
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(0, 255, 136, 0.12) 0%, transparent 60%),
+        radial-gradient(rgba(255, 255, 255, 0.04) 1.5px, transparent 0),
+        linear-gradient(60deg, rgba(255,255,255,0.02) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.02) 75%),
+        linear-gradient(120deg, rgba(255,255,255,0.02) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.02) 75%);
+      background-size: 100% 100%, 28px 28px, 56px 56px, 56px 56px;
+    }
+
+    .font-stadium { font-family: 'Montserrat', sans-serif; }
+
+    /* Metallic Silver / Pitch Green Text Gradients */
+    .text-gradient-silver {
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .text-gradient-green {
+      background: linear-gradient(135deg, #a7f3d0 0%, #00ff88 50%, #059669 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Card Hover Glows */
+    .card-stadium {
+      background: rgba(18, 30, 44, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .card-stadium:hover {
+      border-color: rgba(0, 255, 136, 0.6);
+      box-shadow: 0 0 25px rgba(0, 255, 136, 0.2);
+    }
+
+    /* Size button active state */
+    .size-btn.selected {
+      background: #00ff88 !important;
+      color: #060a0f !important;
+      border-color: #34d399 !important;
+      font-weight: 800 !important;
+      box-shadow: 0 0 12px rgba(0, 255, 136, 0.5);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: #060a0f; }
+    ::-webkit-scrollbar-thumb { background: #1b2b3e; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #00ff88; }
+  </style>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-brand-neon selection:text-black">
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-crackGreen-neon selection:text-black">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-emerald-950 via-brand-card to-emerald-950 border-b border-brand-border text-xs py-2 px-4 text-center text-brand-neon font-medium tracking-wider uppercase">
-        <i class="fa-solid fa-location-dot mr-1"></i> Calle 63A # 24-24, Bogotá &nbsp;|&nbsp; <i class="fa-brands fa-whatsapp ml-2 mr-1"></i> Pedidos: +57 312 358 9030
+  <!-- TOP TICKER BAR -->
+  <div class="bg-gradient-to-r from-pitch-950 via-crackGreen-dark to-pitch-950 text-white py-2 px-4 text-xs font-bold uppercase tracking-widest border-b border-crackGreen/40 text-center">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-2 mx-auto sm:mx-0">
+        <i class="fa-solid fa-location-dot text-crackGreen-neon"></i>
+        <span>Sede Principal Bogotá: <strong class="text-white">Calle 63A # 24-24</strong></span>
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-[11px] text-gray-300">
+        <span>⚽ Réplicas Importadas Triple AAA & Sublimación HD</span>
+        <span>•</span>
+        <span>🚚 Envíos a todo Colombia</span>
+      </div>
+      <div class="mx-auto sm:mx-0 flex items-center gap-2 text-crackGreen-neon font-extrabold">
+        <i class="fa-solid fa-shield-halved"></i> CRACKS DEPORTES
+      </div>
     </div>
+  </div>
 
-    <!-- Header / Navbar -->
-    <header class="sticky top-0 z-40 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3 cursor-pointer" onclick="resetView()">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-neon to-emerald-700 flex items-center justify-center neon-glow">
-                    <i class="fa-solid fa-futbol text-black text-2xl font-black"></i>
-                </div>
-                <div>
-                    <span class="text-xl sm:text-2xl font-black tracking-wider uppercase block text-white">CRACKS <span class="text-brand-neon">DEPORTES</span></span>
-                    <span class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold block">Réplicas AAA &bull; Bogotá</span>
-                </div>
-            </div>
-
-            <!-- Search Bar -->
-            <div class="hidden md:flex items-center flex-1 max-w-md mx-8">
-                <div class="relative w-full">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </span>
-                    <input type="text" id="searchInput" oninput="handleSearch(this.value)" placeholder="Buscar equipo, temporada o diseño..." class="w-full bg-brand-card border border-brand-border rounded-xl pl-10 pr-4 py-2 text-sm text-white focus:outline-none focus:border-brand-neon transition-colors">
-                </div>
-            </div>
-
-            <!-- Actions -->
-            <div class="flex items-center space-x-4">
-                <button onclick="openSizeGuide()" class="hidden sm:flex items-center space-x-2 bg-brand-card hover:bg-brand-border border border-brand-border px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all text-slate-300 hover:text-white">
-                    <i class="fa-solid fa-ruler-combined text-brand-neon"></i>
-                    <span>Guía de Tallas</span>
-                </button>
-                <button onclick="toggleCart()" class="relative bg-brand-neon hover:bg-brand-neonHover text-black px-4 py-2.5 rounded-xl font-bold flex items-center space-x-2 transition-all neon-glow-hover">
-                    <i class="fa-solid fa-cart-shopping text-lg"></i>
-                    <span class="hidden sm:inline">Pedido</span>
-                    <span id="cartBadge" class="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center border-2 border-brand-dark hidden">0</span>
-                </button>
-            </div>
+  <!-- MAIN NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-pitch-950/95 backdrop-blur-xl border-b border-pitch-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO BRANDING WITH CHAMPIONS STAR EMBLEM -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 bg-gradient-to-br from-crackGreen-neon to-crackGreen-dark rounded-2xl flex items-center justify-center shadow-lg shadow-crackGreen/20 group-hover:scale-105 transition duration-300 border border-crackGreen-neon/40">
+          <i class="fa-solid fa-futbol text-pitch-950 text-2xl group-hover:rotate-180 transition duration-700"></i>
         </div>
-        <div class="md:hidden px-4 pb-3">
-            <div class="relative w-full">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </span>
-                <input type="text" id="searchMobileInput" oninput="handleSearch(this.value)" placeholder="Buscar equipo o diseño..." class="w-full bg-brand-card border border-brand-border rounded-xl pl-10 pr-4 py-2 text-sm text-white focus:outline-none focus:border-brand-neon">
-            </div>
+        <div class="flex flex-col">
+          <span class="font-stadium font-black text-2xl sm:text-3xl tracking-tight text-gradient-silver uppercase leading-none">
+            CRACKS<span class="text-gradient-green">_DEPORTES</span>
+          </span>
+          <span class="font-stadium text-[10px] font-bold tracking-[0.25em] text-gray-400 uppercase mt-1">
+            Catálogo Oficial Futbolero
+          </span>
         </div>
-    </header>
+      </a>
 
-    <!-- Main Hero Banner -->
-    <section class="bg-gradient-to-b from-brand-card to-brand-dark py-8 border-b border-brand-border">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div id="breadcrumbContainer" class="flex items-center space-x-2 text-xs text-slate-400 mb-3">
-                <span class="cursor-pointer hover:text-brand-neon" onclick="resetView()">Inicio</span>
-                <span>/</span>
-                <span class="text-white font-semibold">Directorio de Clubes y Colecciones</span>
-            </div>
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                <div>
-                    <h1 id="heroTitle" class="text-2xl sm:text-3xl font-black text-white tracking-wide uppercase">Catálogo de Equipos 2026/2027</h1>
-                    <p id="heroSubtitle" class="text-sm text-slate-400 mt-1">Haz clic sobre un equipo para explorar todas sus versiones y prendas disponibles.</p>
-                </div>
-                <div id="viewModeControls" class="flex items-center space-x-2">
-                    <button onclick="switchMainView('clubs')" id="btnViewClubs" class="px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-brand-neon text-black">
-                        <i class="fa-solid fa-shield-halved mr-1"></i> Ver Clubes
-                    </button>
-                    <button onclick="switchMainView('custom')" id="btnViewCustom" class="px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-brand-card text-slate-300 border border-brand-border hover:border-brand-neon">
-                        <i class="fa-solid fa-wand-magic-sparkles mr-1 text-brand-neon"></i> Personalizados (18)
-                    </button>
-                </div>
-            </div>
+      <!-- HEADER NAVIGATION & CART BUTTON -->
+      <div class="flex items-center gap-3">
+        <button onclick="openSizeGuideModal()" class="hidden md:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-pitch-800 border border-pitch-600 hover:border-crackGreen text-xs font-stadium font-bold text-gray-300 hover:text-white transition">
+          <i class="fa-solid fa-ruler-horizontal text-crackGreen-neon"></i> Guía Tallas
+        </button>
+
+        <a href="#cotizador" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-pitch-800 border border-pitch-600 hover:border-crackGreen text-xs font-stadium font-bold text-gray-300 hover:text-white transition">
+          <i class="fa-solid fa-users text-crackGreen-neon"></i> Equipos
+        </a>
+
+        <!-- CART BUTTON TRIGGER -->
+        <button onclick="toggleCartDrawer()" class="relative inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-crackGreen-neon hover:bg-crackGreen text-pitch-950 font-stadium font-extrabold text-xs uppercase tracking-wider shadow-lg shadow-crackGreen/30 transition hover:scale-105">
+          <i class="fa-solid fa-cart-shopping text-base"></i>
+          <span class="hidden sm:inline">Mi Pedido</span>
+          <span id="cartCountBadge" class="w-5 h-5 rounded-full bg-pitch-950 text-crackGreen-neon font-black text-[11px] flex items-center justify-center ml-1">
+            0
+          </span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- CHAMPIONS STADIUM HERO BANNER -->
+  <section class="relative py-12 lg:py-16 border-b border-pitch-700 overflow-hidden bg-gradient-to-b from-pitch-950 via-pitch-900 to-pitch-950">
+    <!-- Stadium Glow Lights Green -->
+    <div class="absolute -top-24 left-1/4 w-96 h-96 bg-crackGreen-neon/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute -top-24 right-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pitch-800/80 border border-crackGreen/40 text-crackGreen-neon text-xs font-stadium font-bold uppercase tracking-widest mb-6">
+        <i class="fa-solid fa-star"></i> Indumentaria Deportiva Profesional Triple AAA
+      </div>
+
+      <h1 class="font-stadium font-black text-3xl sm:text-5xl lg:text-6xl text-white uppercase tracking-tight max-w-4xl mx-auto leading-none mb-4">
+        Especialistas en <span class="text-gradient-green">Camisetas & Uniformes</span>
+      </h1>
+
+      <p class="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto mb-8 font-medium leading-relaxed">
+        Explora las camisetas de clubes del mundo, selecciones nacionales (Argentina, Brasil) y nuestros <strong class="text-white">18 modelos personalizados sublimados</strong>.
+      </p>
+
+      <!-- HERO BUTTONS -->
+      <div class="flex flex-wrap justify-center items-center gap-4">
+        <a href="#catalogo" class="px-7 py-3 rounded-xl bg-crackGreen-neon hover:bg-crackGreen text-pitch-950 font-stadium font-extrabold text-xs uppercase tracking-wider shadow-xl shadow-crackGreen/20 transition hover:scale-105">
+          <i class="fa-solid fa-shirt"></i> Ver Catálogo
+        </a>
+        <a href="#personalizados" class="px-7 py-3 rounded-xl bg-pitch-800 border border-pitch-600 hover:border-crackGreen text-white font-stadium font-bold text-xs uppercase tracking-wider transition hover:scale-105">
+          <i class="fa-solid fa-palette text-crackGreen-neon"></i> 18 Personalizados
+        </a>
+      </div>
+
+      <!-- SIZES INFO STRIP -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-10 pt-8 border-t border-pitch-700/80 text-center">
+        <div class="p-3 bg-pitch-900/60 rounded-2xl border border-pitch-700">
+          <div class="font-stadium font-black text-lg text-crackGreen-neon">Adultos</div>
+          <div class="text-xs text-gray-400">Tallas S, M, L, XL</div>
         </div>
-    </section>
+        <div class="p-3 bg-pitch-900/60 rounded-2xl border border-pitch-700">
+          <div class="font-stadium font-black text-lg text-white">Niños</div>
+          <div class="text-xs text-gray-400">Tallas 4 a la 28</div>
+        </div>
+        <div class="p-3 bg-pitch-900/60 rounded-2xl border border-pitch-700">
+          <div class="font-stadium font-black text-lg text-crackGreen-neon">Sin Intermediarios</div>
+          <div class="text-xs text-gray-400">Atención Bogotá Calle 63A</div>
+        </div>
+        <div class="p-3 bg-pitch-900/60 rounded-2xl border border-pitch-700">
+          <div class="font-stadium font-black text-lg text-white">Carrito 🛒</div>
+          <div class="text-xs text-gray-400">Consolida y pide en 1 clic</div>
+        </div>
+      </div>
 
-    <!-- Main Content -->
-    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    </div>
+  </section>
+
+  <!-- MAIN CATALOG SECTION -->
+  <main id="catalogo" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow w-full">
+    
+    <!-- SEARCH & FILTER BAR -->
+    <div class="card-stadium p-5 rounded-2xl mb-10 space-y-4 shadow-2xl">
+      <div class="flex flex-col lg:flex-row gap-4 items-center justify-between">
         
-        <!-- Category Filter Pills -->
-        <div id="filterBar" class="flex items-center space-x-2 overflow-x-auto pb-4 mb-8 scrollbar-none">
-            <button onclick="filterCategory('all')" id="pill-all" class="category-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-brand-neon text-black">
-                Todos los Equipos
-            </button>
-            <button onclick="filterCategory('popular')" id="pill-popular" class="category-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-brand-card text-slate-300 border border-brand-border hover:border-brand-neon">
-                ⭐ Más Populares
-            </button>
-            <button onclick="filterCategory('selections')" id="pill-selections" class="category-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-brand-card text-slate-300 border border-brand-border hover:border-brand-neon">
-                🌍 Selecciones
-            </button>
-            <button onclick="filterCategory('kids')" id="pill-kids" class="category-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-brand-card text-slate-300 border border-brand-border hover:border-brand-neon">
-                👶 Versión Niños
-            </button>
-            <button onclick="filterCategory('retro')" id="pill-retro" class="category-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-brand-card text-slate-300 border border-brand-border hover:border-brand-neon">
-                ⏳ Colección Retro
-            </button>
+        <!-- Search Input -->
+        <div class="relative w-full lg:w-96">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+          <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Buscar equipo, kit, versión..." class="w-full bg-pitch-950 border border-pitch-700 rounded-xl pl-11 pr-4 py-2.5 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-crackGreen-neon transition">
         </div>
 
-        <div id="dynamicContainer"></div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-brand-card border-t border-brand-border py-12 mt-16 text-slate-400 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <div class="flex items-center space-x-3 mb-4">
-                    <div class="w-10 h-10 rounded-xl bg-brand-neon flex items-center justify-center text-black font-black">
-                        <i class="fa-solid fa-futbol"></i>
-                    </div>
-                    <span class="text-lg font-black text-white uppercase">CRACKS DEPORTES</span>
-                </div>
-                <p class="text-xs text-slate-400 leading-relaxed">
-                    Réplicas Triple AAA de alta gama, sublimados a la medida y personalizaciones oficiales. Envíos garantizados a todo el país.
-                </p>
-            </div>
-            <div>
-                <h3 class="text-white font-bold uppercase text-xs tracking-wider mb-4">Ubicación y Contacto</h3>
-                <p class="text-xs mb-2"><i class="fa-solid fa-location-dot text-brand-neon mr-2"></i> Calle 63A # 24-24, Bogotá, Colombia</p>
-                <p class="text-xs mb-2"><i class="fa-brands fa-whatsapp text-brand-neon mr-2"></i> +57 312 358 9030</p>
-            </div>
-            <div>
-                <h3 class="text-white font-bold uppercase text-xs tracking-wider mb-4">Precios Estándar</h3>
-                <p class="text-xs mb-1"><strong class="text-white">Réplicas Triple AAA:</strong> $85.000 COP</p>
-                <p class="text-xs mb-3"><strong class="text-white">Kits Personalizados:</strong> $95.000 COP</p>
-                <button onclick="openSizeGuide()" class="text-xs bg-brand-dark border border-brand-border text-brand-neon px-3 py-1.5 rounded-lg font-bold">Ver Tabla de Medidas</button>
-            </div>
+        <!-- Filter Category Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto w-full lg:w-auto pb-2 lg:pb-0 scrollbar-none" id="categoryTabs">
+          <button onclick="setCategory('all')" class="cat-tab px-4 py-2 rounded-xl text-xs font-stadium font-bold uppercase tracking-wider transition whitespace-nowrap bg-crackGreen-neon text-pitch-950" data-cat="all">
+            Todos
+          </button>
+          <button onclick="setCategory('destacados')" class="cat-tab px-4 py-2 rounded-xl text-xs font-stadium font-bold uppercase tracking-wider transition whitespace-nowrap bg-pitch-950 text-gray-300 border border-pitch-700 hover:border-crackGreen" data-cat="destacados">
+            ⭐ Populares
+          </button>
+          <button onclick="setCategory('clubes')" class="cat-tab px-4 py-2 rounded-xl text-xs font-stadium font-bold uppercase tracking-wider transition whitespace-nowrap bg-pitch-950 text-gray-300 border border-pitch-700 hover:border-crackGreen" data-cat="clubes">
+            Todos los Clubes (20)
+          </button>
+          <button onclick="setCategory('selecciones')" class="cat-tab px-4 py-2 rounded-xl text-xs font-stadium font-bold uppercase tracking-wider transition whitespace-nowrap bg-pitch-950 text-gray-300 border border-pitch-700 hover:border-crackGreen" data-cat="selecciones">
+            Selecciones
+          </button>
+          <button onclick="setCategory('retro')" class="cat-tab px-4 py-2 rounded-xl text-xs font-stadium font-bold uppercase tracking-wider transition whitespace-nowrap bg-pitch-950 text-gray-300 border border-pitch-700 hover:border-crackGreen" data-cat="retro">
+            📜 Colección Retro
+          </button>
+          <button onclick="setCategory('nino')" class="cat-tab px-4 py-2 rounded-xl text-xs font-stadium font-bold uppercase tracking-wider transition whitespace-nowrap bg-pitch-950 text-gray-300 border border-pitch-700 hover:border-crackGreen" data-cat="nino">
+            Línea Niño (4-28)
+          </button>
+          <button onclick="setCategory('personalizados')" class="cat-tab px-4 py-2 rounded-xl text-xs font-stadium font-bold uppercase tracking-wider transition whitespace-nowrap bg-pitch-950 text-gray-300 border border-pitch-700 hover:border-crackGreen" data-cat="personalizados">
+            Personalizados (1-18)
+          </button>
         </div>
-    </footer>
 
-    <!-- Cart Drawer -->
-    <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden">
-        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="toggleCart()"></div>
-        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
-            <div class="w-screen max-w-md bg-brand-card border-l border-brand-border flex flex-col shadow-2xl">
-                <div class="flex items-center justify-between p-6 border-b border-brand-border">
-                    <div class="flex items-center space-x-2">
-                        <i class="fa-solid fa-cart-shopping text-brand-neon text-lg"></i>
-                        <h2 class="text-lg font-black text-white uppercase tracking-wider">Tu Carrito de Pedido</h2>
-                    </div>
-                    <button onclick="toggleCart()" class="text-slate-400 hover:text-white p-2">
-                        <i class="fa-solid fa-xmark text-xl"></i>
-                    </button>
-                </div>
-                <div id="cartItemsList" class="flex-1 overflow-y-auto p-6 space-y-4"></div>
-                <div class="p-6 border-t border-brand-border bg-brand-dark">
-                    <div class="flex justify-between items-center mb-4 text-sm font-bold text-white">
-                        <span>Total Estándar:</span>
-                        <span id="cartTotalPrice" class="text-brand-neon text-lg font-black">$ 0 COP</span>
-                    </div>
-                    <button onclick="sendCartToWhatsApp()" class="w-full bg-brand-neon hover:bg-brand-neonHover text-black font-black uppercase text-sm py-3.5 rounded-xl transition-all shadow-lg flex items-center justify-center space-x-2">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>Enviar Pedido por WhatsApp</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <!-- Product Modal -->
-    <div id="productModal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4">
-        <div class="fixed inset-0 bg-black/80 backdrop-blur-sm" onclick="closeProductModal()"></div>
-        <div class="relative bg-brand-card border border-brand-border rounded-2xl max-w-2xl w-full p-6 sm:p-8 z-10 shadow-2xl">
-            <button onclick="closeProductModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
-                <i class="fa-solid fa-xmark text-xl"></i>
-            </button>
-            <div id="modalContent" class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center"></div>
-        </div>
+    <!-- PRODUCTS GRID -->
+    <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Generated via JavaScript -->
     </div>
 
-    <!-- Size Guide Modal -->
-    <div id="sizeGuideModal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4">
-        <div class="fixed inset-0 bg-black/80 backdrop-blur-sm" onclick="closeSizeGuide()"></div>
-        <div class="relative bg-brand-card border border-brand-border rounded-2xl max-w-xl w-full p-6 sm:p-8 z-10 shadow-2xl">
-            <button onclick="closeSizeGuide()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
-                <i class="fa-solid fa-xmark text-xl"></i>
-            </button>
-            <h2 class="text-xl font-black text-white uppercase mb-4 flex items-center">
-                <i class="fa-solid fa-ruler-combined text-brand-neon mr-2"></i> Guía Oficial de Tallas
-            </h2>
-            <div class="space-y-4 text-xs text-slate-300">
-                <div class="bg-brand-dark p-4 rounded-xl border border-brand-border">
-                    <h3 class="text-white font-bold uppercase mb-2 text-sm text-brand-neon">Curva de Adultos (S - XL)</h3>
-                    <ul class="space-y-1">
-                        <li><strong>Talla S:</strong> Ancho 48-50 cm | Alto 70-72 cm</li>
-                        <li><strong>Talla M:</strong> Ancho 52-54 cm | Alto 72-74 cm</li>
-                        <li><strong>Talla L:</strong> Ancho 56-58 cm | Alto 74-76 cm</li>
-                        <li><strong>Talla XL:</strong> Ancho 60-62 cm | Alto 76-78 cm</li>
-                    </ul>
-                </div>
-                <div class="bg-brand-dark p-4 rounded-xl border border-brand-border">
-                    <h3 class="text-white font-bold uppercase mb-2 text-sm text-brand-neon">Curva Infantil (4 - 28)</h3>
-                    <p class="font-mono text-brand-neon font-bold tracking-wider">4 &bull; 6 &bull; 8 &bull; 10 &bull; 12 &bull; 14 &bull; 16 &bull; 18 &bull; 20 &bull; 22 &bull; 24 &bull; 26 &bull; 28</p>
-                </div>
-            </div>
-            <div class="mt-6 text-center">
-                <button onclick="closeSizeGuide()" class="bg-brand-neon text-black font-bold uppercase text-xs px-6 py-2.5 rounded-xl">Entendido</button>
-            </div>
-        </div>
+    <!-- NO RESULTS -->
+    <div id="noResults" class="hidden text-center py-20">
+      <i class="fa-solid fa-futbol text-5xl text-gray-700 mb-3"></i>
+      <h3 class="font-stadium font-bold text-lg text-white mb-1">No encontramos equipaciones con esa búsqueda</h3>
+      <p class="text-xs text-gray-400">Prueba ajustando el nombre del equipo o borra los filtros.</p>
     </div>
 
-    <!-- Application Script with exact Replicas_AAA/Clubes paths -->
-    <script>
-        const clubsData = [
-            {
-                id: 'real_madrid',
-                name: 'Real Madrid',
-                category: 'popular',
-                badge: '⭐ Top Popular',
-                folder: 'Real_Madrid',
-                description: 'Kits oficiales y variantes de temporada del club merengue.',
-                items: [
-                    { id: 'rm_1', name: 'Real Madrid - Local 26/27', file: 'Replicas_AAA/Clubes/Real_Madrid/real_madrid_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 },
-                    { id: 'rm_2', name: 'Real Madrid - Visitante 26/27', file: 'Replicas_AAA/Clubes/Real_Madrid/real_madrid_visitante_26-27.jpg', season: '26-27', type: 'Visitante', price: 85000 },
-                    { id: 'rm_3', name: 'Real Madrid - Local Retro 96/97', file: 'Replicas_AAA/Clubes/Real_Madrid/real_madrid_titular_retro_96-97.jpg', season: '96-97 Retro', type: 'Retro', price: 85000 }
-                ]
-            },
-            {
-                id: 'barcelona',
-                name: 'FC Barcelona',
-                category: 'popular',
-                badge: '⭐ Top Popular',
-                folder: 'Barcelona',
-                description: 'Indumentaria oficial blaugrana con acabados de alta definición.',
-                items: [
-                    { id: 'fcb_1', name: 'FC Barcelona - Local 26/27', file: 'Replicas_AAA/Clubes/Barcelona/barcelona_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 },
-                    { id: 'fcb_2', name: 'FC Barcelona - Visitante 26/27', file: 'Replicas_AAA/Clubes/Barcelona/barcelona_visitante_26-27.jpg', season: '26-27', type: 'Visitante', price: 85000 }
-                ]
-            },
-            {
-                id: 'manchester_city',
-                name: 'Manchester City',
-                category: 'popular',
-                badge: '⭐ Top Popular',
-                folder: 'Manchester_City',
-                description: 'Diseños citizens con tecnología ultra transpirable.',
-                items: [
-                    { id: 'mci_1', name: 'Manchester City - Local 26/27', file: 'Replicas_AAA/Clubes/Manchester_City/manchester_city_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 },
-                    { id: 'mci_2', name: 'Manchester City - Tercera 26/27', file: 'Replicas_AAA/Clubes/Manchester_City/manchester_city_tercera_26-27.jpg', season: '26-27', type: 'Tercera', price: 85000 }
-                ]
-            },
-            {
-                id: 'psg',
-                name: 'Paris Saint-Germain (PSG)',
-                category: 'popular',
-                badge: '⭐ Destacado',
-                folder: 'PSG',
-                description: 'Estilo parisino con franja central y patrocinio oficial.',
-                items: [
-                    { id: 'psg_1', name: 'PSG - Visitante 26/27', file: 'Replicas_AAA/Clubes/PSG/psg_visitante_26-27.jpg', season: '26-27', type: 'Visitante', price: 85000 },
-                    { id: 'psg_2', name: 'PSG - Local 26/27', file: 'Replicas_AAA/Clubes/PSG/psg_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 }
-                ]
-            },
-            {
-                id: 'ac_milan',
-                name: 'AC Milan',
-                category: 'clubs',
-                badge: 'Rossonero',
-                folder: 'AC_Milan',
-                description: 'Franjas rojinegras clásicas y variantes de visitante.',
-                items: [
-                    { id: 'mil_1', name: 'AC Milan - Local 26/27', file: 'Replicas_AAA/Clubes/AC_Milan/ac_milan_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 },
-                    { id: 'mil_2', name: 'AC Milan - Visitante 26/27', file: 'Replicas_AAA/Clubes/AC_Milan/ac_milan_visitante_26-27.jpg', season: '26-27', type: 'Visitante', price: 85000 },
-                    { id: 'mil_3', name: 'AC Milan - Tercera 26/27', file: 'Replicas_AAA/Clubes/AC_Milan/ac_milan_tercera_26-27.jpg', season: '26-27', type: 'Tercera', price: 85000 }
-                ]
-            },
-            {
-                id: 'arsenal',
-                name: 'Arsenal F.C.',
-                category: 'retro',
-                badge: '⏳ Colección Retro',
-                folder: 'Arsenal',
-                description: 'Ediciones históricas y retro conmemorativas.',
-                items: [
-                    { id: 'ars_1', name: 'Arsenal - Visitante Retro 2002/2003', file: 'Replicas_AAA/Clubes/Arsenal/arsenal_visitante_retro_02-03.jpg', season: '02-03 Retro', type: 'Retro', price: 85000 }
-                ]
-            },
-            {
-                id: 'borussia_dortmund',
-                name: 'Borussia Dortmund',
-                category: 'kids',
-                badge: '👶 Versión Niño Disponible',
-                folder: 'Borussia_Dortmund',
-                description: 'Kits amarillos vibrantes en tallas infantiles y adultos.',
-                items: [
-                    { id: 'bvb_1', name: 'Borussia Dortmund - Local Versión Niño', file: 'Replicas_AAA/Clubes/Borussia_Dortmund/borussia_dortmund_local_nino_26-27.jpg', season: '26-27', type: 'Versión Niño', price: 85000 }
-                ]
-            },
-            {
-                id: 'liverpool',
-                name: 'Liverpool F.C.',
-                category: 'kids',
-                badge: '👶 Versión Niño Disponible',
-                folder: 'Liverpool',
-                description: 'Equipaciones oficiales de los Reds.',
-                items: [
-                    { id: 'liv_1', name: 'Liverpool - Visitante 26/27', file: 'Replicas_AAA/Clubes/Liverpool/liverpool_visitante_26-27.jpg', season: '26-27', type: 'Visitante', price: 85000 },
-                    { id: 'liv_2', name: 'Liverpool - Tercera Equipación Versión Niño', file: 'Replicas_AAA/Clubes/Liverpool/liverpool_tercera_nino_26-27.jpg', season: '26-27', type: 'Versión Niño', price: 85000 }
-                ]
-            },
-            {
-                id: 'manchester_united',
-                name: 'Manchester United',
-                category: 'kids',
-                badge: '👶 Versión Niño Disponible',
-                folder: 'Manchester_United',
-                description: 'Pasión de Old Trafford en todas las tallas.',
-                items: [
-                    { id: 'mun_1', name: 'Manchester United - Local Versión Niño (Short Rojo)', file: 'Replicas_AAA/Clubes/Manchester_United/manchester_united_local_nino_26-27.jpg', season: '26-27', type: 'Versión Niño', price: 85000 },
-                    { id: 'mun_2', name: 'Manchester United - Local Versión Niño (Short Negro)', file: 'Replicas_AAA/Clubes/Manchester_United/manchester_united_local_nino_v2_26-27.jpg', season: '26-27', type: 'Versión Niño V2', price: 85000 }
-                ]
-            },
-            {
-                id: 'inter_miami',
-                name: 'Inter Miami C.F.',
-                category: 'popular',
-                badge: '⭐ Destacado',
-                folder: 'Inter_Miami',
-                description: 'Estilo moderno rosado/negro con detalles de la MLS.',
-                items: [
-                    { id: 'mia_1', name: 'Inter Miami - Visitante 26/27', file: 'Replicas_AAA/Clubes/Inter_Miami/inter_miami_visitante_26-27.jpg', season: '26-27', type: 'Visitante', price: 85000 }
-                ]
-            },
-            {
-                id: 'borussia_monchengladbach',
-                name: 'Borussia Mönchengladbach',
-                category: 'clubs',
-                folder: 'Borussia_Monchengladbach',
-                description: 'Los Potros de la Bundesliga.',
-                items: [
-                    { id: 'bmg_1', name: 'Borussia Mönchengladbach - Local 26/27', file: 'Replicas_AAA/Clubes/Borussia_Monchengladbach/borussia_monchengladbach_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 }
-                ]
-            },
-            {
-                id: 'bayern_munich',
-                name: 'Bayern Munich',
-                category: 'clubs',
-                folder: 'Bayern_Munich',
-                description: 'El gigante bávaro con acabados de primera.',
-                items: [
-                    { id: 'bay_1', name: 'Bayern Munich - Local 26/27', file: 'Replicas_AAA/Clubes/Bayern_Munich/bayern_munich_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 }
-                ]
-            },
-            {
-                id: 'juventus',
-                name: 'Juventus',
-                category: 'clubs',
-                folder: 'Juventus',
-                description: 'Elegancia Bianconera.',
-                items: [
-                    { id: 'juv_1', name: 'Juventus - Local 26/27', file: 'Replicas_AAA/Clubes/Juventus/juventus_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 }
-                ]
-            },
-            {
-                id: 'chelsea',
-                name: 'Chelsea F.C.',
-                category: 'clubs',
-                folder: 'Chelsea',
-                description: 'Indumentaria oficial Blues.',
-                items: [
-                    { id: 'che_1', name: 'Chelsea - Local 26/27', file: 'Replicas_AAA/Clubes/Chelsea/chelsea_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 }
-                ]
-            },
-            {
-                id: 'al_nassr',
-                name: 'Al Nassr',
-                category: 'clubs',
-                folder: 'Al_Nassr',
-                description: 'Kits oficiales de Arabia Saudita.',
-                items: [
-                    { id: 'aln_1', name: 'Al Nassr - Local 26/27', file: 'Replicas_AAA/Clubes/Al_Nassr/al_nassr_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 }
-                ]
-            },
-            {
-                id: 'america',
-                name: 'América',
-                category: 'clubs',
-                folder: 'America',
-                description: 'Pasión latina.',
-                items: [
-                    { id: 'amc_1', name: 'América - Local 26/27', file: 'Replicas_AAA/Clubes/America/america_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 }
-                ]
-            },
-            {
-                id: 'cruzeiro',
-                name: 'Cruzeiro',
-                category: 'clubs',
-                folder: 'Cruzeiro',
-                description: 'Tradición brasileña.',
-                items: [
-                    { id: 'crz_1', name: 'Cruzeiro - Local 26/27', file: 'Replicas_AAA/Clubes/Cruzeiro/cruzeiro_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 }
-                ]
-            },
-            {
-                id: 'newcastle',
-                name: 'Newcastle United',
-                category: 'clubs',
-                folder: 'Newcastle',
-                description: 'Magpies de la Premier League.',
-                items: [
-                    { id: 'new_1', name: 'Newcastle - Local 26/27', file: 'Replicas_AAA/Clubes/Newcastle/newcastle_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 }
-                ]
-            },
-            {
-                id: 'palmeiras',
-                name: 'Palmeiras',
-                category: 'clubs',
-                folder: 'Palmeiras',
-                description: 'Verdão brasileño.',
-                items: [
-                    { id: 'pal_1', name: 'Palmeiras - Local 26/27', file: 'Replicas_AAA/Clubes/Palmeiras/palmeiras_local_26-27.jpg', season: '26-27', type: 'Local', price: 85000 }
-                ]
-            },
-            {
-                id: 'tottenham',
-                name: 'Tottenham Hotspur',
-                category: 'clubs',
-                folder: 'Tottenham',
-                description: 'Spurs del norte de Londres.',
-                items: [
-                    { id: 'tot_1', name: 'Tottenham - Visitante 26/27', file: 'Replicas_AAA/Clubes/Tottenham/tottenham_visitante_26-27.jpg', season: '26-27', type: 'Visitante', price: 85000 }
-                ]
-            }
-        ];
+  </main>
 
-        const selectionsData = [
-            {
-                id: 'argentina',
-                name: 'Selección Argentina',
-                category: 'selections',
-                badge: '🌍 Campeón Mundial',
-                folder: 'Selecciones',
-                description: 'Indumentaria oficial albiceleste con detalles premium.',
-                items: [
-                    { id: 'arg_1', name: 'Argentina - Visitante 26/27', file: 'Replicas_AAA/Selecciones/Argentina/argentina_visitante_26-27.jpg', season: '26-27', type: 'Visitante', price: 85000 }
-                ]
-            },
-            {
-                id: 'brasil',
-                name: 'Selección Brasil',
-                category: 'selections',
-                badge: '🌍 Canarinha',
-                folder: 'Selecciones',
-                description: 'Kits oficiales de la pentacampeona del mundo.',
-                items: [
-                    { id: 'bra_1', name: 'Brasil - Kit Portero Niño 26/27', file: 'Replicas_AAA/Selecciones/Brasil/brasil_portero_nino_26-27.jpg', season: '26-27', type: 'Versión Niño', price: 85000 }
-                ]
-            }
-        ];
+  <!-- JAVASCRIPT LOGIC UPDATES -->
+  <script>
+    const adultSizes = ['S', 'M', 'L', 'XL'];
+    const kidsSizes = ['4', '6', '8', '10', '12', '14', '16', '18', '20', '22', '24', '26', '28'];
 
-        const customItems = Array.from({ length: 18 }, (_, i) => {
-            const num = String(i + 1).padStart(2, '0');
-            return {
-                id: `custom_${num}`,
-                name: `Kit Personalizado #${num}`,
-                file: `Personalizados/personalizado_${num}.jpg`,
-                season: 'Personalizable',
-                type: 'Sublimado Custom',
-                price: 95000,
-                description: 'Diseño 100% personalizable con colores, nombres y dorsales para tu equipo.'
-            };
-        });
+    // FULL CATALOG BASED ON USER'S FOLDER STRUCTURE
+    const catalogData = [
+      // TOP POPULAR CLUBS FIRST
+      {
+        id: 'real_madrid_local_26-27',
+        name: 'Real Madrid Local 2026/2027',
+        team: 'Real Madrid',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: true,
+        isKids: false,
+        file: 'real_madrid_local_26-27.jpg',
+        desc: 'Camiseta blanca tradicional con detalles dorados y negros, escudo bordado oficial y sponsor Emirates.',
+        img: 'https://placehold.co/600x700/121e2c/ffffff?text=Real+Madrid+Local'
+      },
+      {
+        id: 'barcelona_local_26-27',
+        name: 'FC Barcelona Local 2026/2027',
+        team: 'Barcelona',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: true,
+        isKids: false,
+        file: 'barcelona_local_26-27.jpg',
+        desc: 'Clásicos tonos blaugrana en franjas verticales estilizadas con sponsor Spotify y escudo bordado.',
+        img: 'https://placehold.co/600x700/121e2c/3b82f6?text=Barcelona+Local'
+      },
+      {
+        id: 'manchester_city_local_26-27',
+        name: 'Manchester City Local 2026/2027',
+        team: 'Manchester City',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: true,
+        isKids: false,
+        file: 'manchester_city_local_26-27.jpg',
+        desc: 'Azul celeste clásico con ribetes blancos y marinos, sponsor Etihad Airways y tejido ultra transpirable.',
+        img: 'https://placehold.co/600x700/121e2c/38bdf8?text=Man+City+Local'
+      },
+      {
+        id: 'bayern_munich_local_26-27',
+        name: 'Bayern München Local 2026/2027',
+        team: 'Bayern Munich',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: true,
+        isKids: false,
+        file: 'bayern_munich_local_26-27.jpg',
+        desc: 'Rojo bávaro intenso con patrón geométrico frontal y sponsor Telekom.',
+        img: 'https://placehold.co/600x700/121e2c/ef4444?text=Bayern+Munich'
+      },
+      {
+        id: 'psg_visitante_26-27',
+        name: 'Paris Saint-Germain Visitante 2026/2027',
+        team: 'PSG',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: true,
+        isKids: false,
+        file: 'psg_visitante_26-27.jpg',
+        desc: 'Base blanca parisina con franja vertical central degradada azul/roja y Qatar Airways.',
+        img: 'https://placehold.co/600x700/121e2c/ffffff?text=PSG+Away'
+      },
+      {
+        id: 'inter_miami_local_26-27',
+        name: 'Inter Miami Local 2026/2027',
+        team: 'Inter Miami',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: true,
+        isKids: false,
+        file: 'inter_miami_local_26-27.jpg',
+        desc: 'Rosado emblemático de las garzas con detalles negros y sponsor Royal Caribbean.',
+        img: 'https://placehold.co/600x700/121e2c/f472b6?text=Inter+Miami'
+      },
+      {
+        id: 'al_nassr_local_26-27',
+        name: 'Al Nassr Local 2026/2027',
+        team: 'Al Nassr',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: true,
+        isKids: false,
+        file: 'al_nassr_local_26-27.jpg',
+        desc: 'Amarillo neón con acentos azul marino, sponsor KAFD y escudo de alta resolución.',
+        img: 'https://placehold.co/600x700/121e2c/facc15?text=Al+Nassr'
+      },
+      {
+        id: 'juventus_local_26-27',
+        name: 'Juventus Local 2026/2027',
+        team: 'Juventus',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: true,
+        isKids: false,
+        file: 'juventus_local_26-27.jpg',
+        desc: 'Franjas bianconeras estilizadas en blanco y negro con textura de impacto moderno.',
+        img: 'https://placehold.co/600x700/121e2c/ffffff?text=Juventus+Local'
+      },
 
-        // App state
-        let currentMainView = 'clubs';
-        let currentClubFolder = null;
-        let activeFilter = 'all';
-        let searchQuery = '';
-        let cart = [];
-        const selectedSizes = {};
+      // ALL REMAINING CLUBS FROM USER'S FOLDER LIST
+      {
+        id: 'ac_milan_local_26-27',
+        name: 'AC Milan Local 2026/2027',
+        team: 'AC Milan',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: false,
+        isKids: false,
+        file: 'ac_milan_local_26-27.jpg',
+        desc: 'Tradicional uniforme rossonero con franjas verticales rojas y negras y sponsor Emirates.',
+        img: 'https://placehold.co/600x700/121e2c/00ff88?text=AC+Milan+Local'
+      },
+      {
+        id: 'america_local_26-27',
+        name: 'Club América Local 2026/2027',
+        team: 'América',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: false,
+        isKids: false,
+        file: 'america_local_26-27.jpg',
+        desc: 'Amarillo crema crema con detalles azul crema y sponsor Caliente.',
+        img: 'https://placehold.co/600x700/121e2c/facc15?text=Club+America'
+      },
+      {
+        id: 'arsenal_visitante_retro_02-03',
+        name: 'Arsenal Visitante Retro 2002/2003',
+        team: 'Arsenal',
+        season: '2002/2003 Retro',
+        category: 'clubes',
+        isFeatured: false,
+        isKids: false,
+        file: 'arsenal_visitante_retro_02-03.jpg',
+        desc: 'Mítica camiseta azul marino con degrade celeste radial y patrocinador histórico O2.',
+        img: 'https://placehold.co/600x700/121e2c/38bdf8?text=Arsenal+Retro+02-03'
+      },
+      {
+        id: 'borussia_dortmund_local_nino_26-27',
+        name: 'Borussia Dortmund Local (Versión Niño)',
+        team: 'Borussia Dortmund',
+        season: '2026/2027',
+        category: 'nino',
+        isFeatured: false,
+        isKids: true,
+        file: 'borussia_dortmund_local_nino_26-27.jpg',
+        desc: 'Conjunto infantil amarillo vibrante con mangas negras y sponsor Vodafone.',
+        img: 'https://placehold.co/600x700/121e2c/facc15?text=BVB+Nino'
+      },
+      {
+        id: 'borussia_monchengladbach_26-27',
+        name: 'Borussia Mönchengladbach 2026/2027',
+        team: 'Borussia Monchengladbach',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: false,
+        isKids: false,
+        file: 'borussia_monchengladbach_26-27.jpg',
+        desc: 'Base blanca con franja vertical verde y negra tradicional.',
+        img: 'https://placehold.co/600x700/121e2c/00ff88?text=Mgladbach'
+      },
+      {
+        id: 'chelsea_local_26-27',
+        name: 'Chelsea F.C. Local 2026/2027',
+        team: 'Chelsea',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: false,
+        isKids: false,
+        file: 'chelsea_local_26-27.jpg',
+        desc: 'Azul royal característico de Stamford Bridge con acabados iridiscentes.',
+        img: 'https://placehold.co/600x700/121e2c/2563eb?text=Chelsea+FC'
+      },
+      {
+        id: 'cruzeiro_local_26-27',
+        name: 'Cruzeiro Esporte Clube Local 2026/2027',
+        team: 'Cruzeiro',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: false,
+        isKids: false,
+        file: 'cruzeiro_local_26-27.jpg',
+        desc: 'Azul zafiro con las cinco estrellas bordadas de la Cruz del Sur.',
+        img: 'https://placehold.co/600x700/121e2c/1d4ed8?text=Cruzeiro'
+      },
+      {
+        id: 'liverpool_tercera_nino_26-27',
+        name: 'Liverpool Tercera Equipación (Versión Niño)',
+        team: 'Liverpool',
+        season: '2026/2027',
+        category: 'nino',
+        isFeatured: false,
+        isKids: true,
+        file: 'liverpool_tercera_nino_26-27.jpg',
+        desc: 'Kit infantil con camuflaje geométrico granate y sponsor Standard Chartered.',
+        img: 'https://placehold.co/600x700/121e2c/00ff88?text=Liverpool+Nino'
+      },
+      {
+        id: 'manchester_united_local_nino_26-27',
+        name: 'Manchester United Local (Versión Niño)',
+        team: 'Manchester United',
+        season: '2026/2027',
+        category: 'nino',
+        isFeatured: false,
+        isKids: true,
+        file: 'manchester_united_local_nino_26-27.jpg',
+        desc: 'Camiseta roja de los Red Devils con cuello polo y sponsor Snapdragon.',
+        img: 'https://placehold.co/600x700/121e2c/ef4444?text=Man+Utd+Nino'
+      },
+      {
+        id: 'newcastle_local_26-27',
+        name: 'Newcastle United Local 2026/2027',
+        team: 'Newcastle',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: false,
+        isKids: false,
+        file: 'newcastle_local_26-27.jpg',
+        desc: 'Rayas blanquinegras tradicionales de las urracas con sponsor Sela.',
+        img: 'https://placehold.co/600x700/121e2c/ffffff?text=Newcastle'
+      },
+      {
+        id: 'palmeiras_local_26-27',
+        name: 'S.E. Palmeiras Local 2026/2027',
+        team: 'Palmeiras',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: false,
+        isKids: false,
+        file: 'palmeiras_local_26-27.jpg',
+        desc: 'Verde esmeralda con grabado alusivo a la historia del Verdão y sponsor Crefisa.',
+        img: 'https://placehold.co/600x700/121e2c/059669?text=Palmeiras'
+      },
+      {
+        id: 'tottenham_visitante_26-27',
+        name: 'Tottenham Hotspur Visitante 2026/2027',
+        team: 'Tottenham',
+        season: '2026/2027',
+        category: 'clubes',
+        isFeatured: false,
+        isKids: false,
+        file: 'tottenham_visitante_26-27.jpg',
+        desc: 'Camiseta visitante azul marino con estampado óptico y sponsor AIA.',
+        img: 'https://placehold.co/600x700/121e2c/1e293b?text=Tottenham'
+      },
 
-        document.addEventListener('DOMContentLoaded', () => {
-            renderView();
-            updateCartUI();
-        });
+      // SELECCIONES (ARGENTINA & BRASIL)
+      {
+        id: 'argentina_visitante_26-27',
+        name: 'Argentina Visitante 2026/2027',
+        team: 'Argentina',
+        season: '2026/2027',
+        category: 'selecciones',
+        isFeatured: true,
+        isKids: false,
+        file: 'argentina_visitante_26-27.jpg',
+        desc: 'Camiseta blanca con motivo barroco celeste, trébol Adidas Originals y short negro.',
+        img: 'https://placehold.co/600x700/121e2c/38bdf8?text=Argentina+Visitante'
+      },
+      {
+        id: 'brasil_portero_nino_26-27',
+        name: 'Brasil Portero (Versión Niño / Selección)',
+        team: 'Brasil',
+        season: '2026/2027',
+        category: 'selecciones',
+        isKids: true,
+        file: 'brasil_portero_nino_26-27.jpg',
+        desc: 'Kit de arquero de Brasil en versión infantil con patrón óptico abstracto y acentos amarillo neón.',
+        img: 'https://placehold.co/600x700/121e2c/00ff88?text=Brasil+Portero+Nino'
+      }
+    ];
 
-        function switchMainView(view) {
-            currentMainView = view;
-            currentClubFolder = null;
-            
-            const btnClubs = document.getElementById('btnViewClubs');
-            const btnCustom = document.getElementById('btnViewCustom');
-            const filterBar = document.getElementById('filterBar');
-            
-            if (view === 'clubs') {
-                btnClubs.className = 'px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-brand-neon text-black';
-                btnCustom.className = 'px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-brand-card text-slate-300 border border-brand-border hover:border-brand-neon';
-                filterBar.style.display = 'flex';
-                document.getElementById('heroTitle').innerText = 'Directorio de Clubes y Selecciones';
-                document.getElementById('heroSubtitle').innerText = 'Haz clic sobre un equipo para explorar todas sus versiones y prendas disponibles.';
-            } else {
-                btnCustom.className = 'px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-brand-neon text-black';
-                btnClubs.className = 'px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-brand-card text-slate-300 border border-brand-border hover:border-brand-neon';
-                filterBar.style.display = 'none';
-                document.getElementById('heroTitle').innerText = 'Colección de 18 Personalizados';
-                document.getElementById('heroSubtitle').innerText = 'Diseños sublimados profesionales para torneos o equipos a la medida.';
-            }
-            renderView();
+    // GENERATE 18 CUSTOM KITS
+    const customItems = Array.from({ length: 18 }, (_, index) => {
+      const idx = String(index + 1).padStart(2, '0');
+      return {
+        id: `personalizado_${idx}`,
+        name: `Kit Personalizado #${idx}`,
+        team: 'Personalizado',
+        season: 'Sublimado',
+        category: 'personalizados',
+        isKids: false,
+        file: `personalizado_${idx}.jpg`,
+        desc: `Plantilla de diseño sublimado #${idx}. Personalizable al 100% con escudos, patrocinadores, nombres y números.`,
+        img: `https://placehold.co/600x700/151c28/00ff88?text=Personalizado+${idx}`
+      };
+    });
+
+    const selectedSizesState = {};
+    let cartList = [];
+    let activeCat = 'all';
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderProducts(catalogData);
+      renderCustomGallery();
+    });
+
+    // FUNCTION TO RENDER THE 18 CUSTOM KITS GALLERY
+    function renderCustomGallery() {
+      const galleryGrid = document.getElementById('customGalleryGrid');
+      if (!galleryGrid) return;
+      galleryGrid.innerHTML = '';
+
+      customItems.forEach(c => {
+        const item = document.createElement('div');
+        item.className = 'card-stadium rounded-xl overflow-hidden hover:border-crackGreen transition duration-300 group cursor-pointer';
+        item.onclick = () => openCustomModal(c);
+
+        item.innerHTML = `
+          <div class="aspect-[4/5] relative bg-pitch-950">
+            <img src="${c.img}" alt="${c.name}" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+            <span class="absolute bottom-2 left-2 right-2 bg-pitch-950/90 text-[10px] text-center font-mono text-crackGreen-neon py-0.5 rounded border border-pitch-700">
+              ${c.file}
+            </span>
+          </div>
+        `;
+        galleryGrid.appendChild(item);
+      });
+    }
+
+    function renderProducts(items) {
+      const grid = document.getElementById('productsGrid');
+      const noResults = document.getElementById('noResults');
+      if (!grid) return;
+
+      grid.innerHTML = '';
+
+      if (items.length === 0) {
+        if (noResults) noResults.classList.remove('hidden');
+        return;
+      } else {
+        if (noResults) noResults.classList.add('hidden');
+      }
+
+      items.forEach(prod => {
+        const sizesList = prod.isKids ? kidsSizes : adultSizes;
+        const defaultSize = sizesList[0];
+
+        if (!selectedSizesState[prod.id]) {
+          selectedSizesState[prod.id] = defaultSize;
         }
 
-        function resetView() {
-            currentClubFolder = null;
-            searchQuery = '';
-            document.getElementById('searchInput').value = '';
-            document.getElementById('searchMobileInput').value = '';
-            switchMainView('clubs');
-        }
+        const card = document.createElement('div');
+        card.className = 'card-stadium rounded-2xl overflow-hidden flex flex-col justify-between transition duration-300 group shadow-xl';
 
-        function filterCategory(category) {
-            activeFilter = category;
-            document.querySelectorAll('.category-pill').forEach(pill => {
-                pill.className = 'category-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-brand-card text-slate-300 border border-brand-border hover:border-brand-neon';
-            });
-            const activePill = document.getElementById(`pill-${category}`);
-            if (activePill) {
-                activePill.className = 'category-pill whitespace-nowrap px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-brand-neon text-black';
-            }
-            renderView();
-        }
+        card.innerHTML = `
+          <div>
+            <div class="relative bg-pitch-950 aspect-[4/5] overflow-hidden">
+              <img src="${prod.img}" alt="${prod.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 bg-pitch-950/90 border border-pitch-700 text-crackGreen-neon text-[10px] font-stadium font-bold uppercase px-2.5 py-1 rounded-full">
+                ${prod.season || '2026/27'}
+              </span>
+            </div>
 
-        function handleSearch(query) {
-            searchQuery = query.toLowerCase().trim();
-            renderView();
-        }
+            <div class="p-5">
+              <span class="text-[10px] font-stadium font-bold text-gray-400 uppercase tracking-widest block mb-1">
+                ${prod.team}
+              </span>
+              <h3 class="font-stadium font-bold text-sm text-white group-hover:text-crackGreen-neon transition line-clamp-1">
+                ${prod.name}
+              </h3>
+              <p class="text-xs text-gray-400 mt-1.5 line-clamp-2 leading-relaxed">
+                ${prod.desc}
+              </p>
 
-        function openClubView(clubId) {
-            currentClubFolder = clubId;
-            const allEntities = [...clubsData, ...selectionsData];
-            const club = allEntities.find(c => c.id === clubId);
-            if (!club) return;
-
-            document.getElementById('heroTitle').innerText = club.name;
-            document.getElementById('heroSubtitle').innerText = club.description || `Colecciones disponibles para ${club.name}.`;
-            renderClubUniforms(club);
-        }
-
-        function renderView() {
-            const container = document.getElementById('dynamicContainer');
-            if (currentMainView === 'custom') {
-                renderCustomGallery(container);
-                return;
-            }
-
-            if (currentClubFolder) {
-                const allEntities = [...clubsData, ...selectionsData];
-                const club = allEntities.find(c => c.id === currentClubFolder);
-                if (club) renderClubUniforms(club);
-                return;
-            }
-
-            renderClubsDirectory(container);
-        }
-
-        function renderClubsDirectory(container) {
-            let allItems = [...clubsData, ...selectionsData];
-
-            if (activeFilter === 'popular') allItems = allItems.filter(item => item.category === 'popular');
-            else if (activeFilter === 'selections') allItems = allItems.filter(item => item.category === 'selections');
-            else if (activeFilter === 'kids') allItems = allItems.filter(item => item.category === 'kids');
-            else if (activeFilter === 'retro') allItems = allItems.filter(item => item.category === 'retro');
-
-            if (searchQuery) {
-                allItems = allItems.filter(item => item.name.toLowerCase().includes(searchQuery));
-            }
-
-            let html = `<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">`;
-            allItems.forEach(club => {
-                const coverImage = club.items[0] ? club.items[0].file : 'placeholder.jpg';
-                html += `
-                    <div onclick="openClubView('${club.id}')" class="group bg-brand-card border border-brand-border hover:border-brand-neon rounded-2xl p-4 flex flex-col items-center cursor-pointer transition-all hover:scale-[1.02]">
-                        <div class="w-full aspect-square bg-brand-dark rounded-xl overflow-hidden mb-3 relative flex items-center justify-center p-2 border border-brand-border/50">
-                            <img src="${coverImage}" alt="${club.name}" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=400&auto=format&fit=crop&q=60'">
-                            ${club.badge ? `<span class="absolute top-2 left-2 bg-brand-neon/90 text-black text-[10px] font-black px-2 py-0.5 rounded-md uppercase">${club.badge}</span>` : ''}
-                        </div>
-                        <h3 class="text-white font-bold text-sm text-center group-hover:text-brand-neon transition-colors">${club.name}</h3>
-                        <span class="text-[11px] text-slate-400 mt-1">${club.items.length} ${club.items.length === 1 ? 'modelo' : 'modelos'}</span>
-                    </div>
-                `;
-            });
-            html += `</div>`;
-            container.innerHTML = html;
-        }
-
-        function renderClubUniforms(club) {
-            const container = document.getElementById('dynamicContainer');
-            let items = club.items;
-
-            if (searchQuery) {
-                items = items.filter(i => i.name.toLowerCase().includes(searchQuery));
-            }
-
-            let html = `
-                <div class="mb-6 flex items-center justify-between">
-                    <button onclick="resetView()" class="bg-brand-card hover:bg-brand-border border border-brand-border text-slate-300 hover:text-white px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all flex items-center space-x-2">
-                        <i class="fa-solid fa-arrow-left"></i>
-                        <span>Volver al Directorio</span>
+              <!-- Size Selector -->
+              <div class="mt-4">
+                <label class="block text-[10px] font-stadium font-bold uppercase text-gray-400 mb-1.5">
+                  Talla (${prod.isKids ? 'Niño 4-28' : 'Adulto S-XL'}):
+                </label>
+                <div class="flex flex-wrap gap-1.5">
+                  ${sizesList.map(sz => `
+                    <button type="button" onclick="selectCardSize('${prod.id}', '${sz}', this)" class="size-btn px-2 py-1 rounded-lg bg-pitch-950 border border-pitch-700 text-xs font-bold text-gray-300 hover:border-crackGreen transition ${selectedSizesState[prod.id] === sz ? 'selected' : ''}">
+                      ${sz}
                     </button>
-                    <span class="text-xs text-slate-400 font-semibold">${items.length} prendas disponibles</span>
+                  `).join('')}
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            `;
+              </div>
 
-            items.forEach(item => {
-                html += `
-                    <div class="bg-brand-card border border-brand-border rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-brand-neon transition-all">
-                        <div>
-                            <div class="w-full aspect-[4/5] bg-brand-dark relative overflow-hidden flex items-center justify-center p-2 cursor-pointer" onclick="openProductModal('${item.id}', '${club.name}')">
-                                <img src="${item.file}" alt="${item.name}" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=400&auto=format&fit=crop&q=60'">
-                                <span class="absolute top-3 right-3 bg-brand-dark/80 backdrop-blur-md text-brand-neon text-[10px] font-black px-2.5 py-1 rounded-lg border border-brand-border">${item.season}</span>
-                            </div>
-                            <div class="p-4">
-                                <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1">${club.name} &bull; ${item.type}</span>
-                                <h3 class="text-white font-bold text-sm mb-1">${item.name}</h3>
-                                <div class="text-brand-neon font-black text-sm mb-3">$ ${item.price.toLocaleString('es-CO')} COP</div>
-                                
-                                <div class="mb-3">
-                                    <label class="text-[10px] uppercase font-bold text-slate-400 block mb-1.5">Talla:</label>
-                                    <div class="flex flex-wrap gap-1">
-                                        <button onclick="selectQuickSize(this, '${item.id}', 'Adulto S')" class="px-2 py-1 bg-brand-dark border border-brand-border rounded text-[11px] font-bold text-slate-300 hover:border-brand-neon">S</button>
-                                        <button onclick="selectQuickSize(this, '${item.id}', 'Adulto M')" class="px-2 py-1 bg-brand-dark border border-brand-border rounded text-[11px] font-bold text-slate-300 hover:border-brand-neon">M</button>
-                                        <button onclick="selectQuickSize(this, '${item.id}', 'Adulto L')" class="px-2 py-1 bg-brand-dark border border-brand-border rounded text-[11px] font-bold text-slate-300 hover:border-brand-neon">L</button>
-                                        <button onclick="selectQuickSize(this, '${item.id}', 'Adulto XL')" class="px-2 py-1 bg-brand-dark border border-brand-border rounded text-[11px] font-bold text-slate-300 hover:border-brand-neon">XL</button>
-                                        <button onclick="selectQuickSize(this, '${item.id}', 'Niño 12')" class="px-2 py-1 bg-brand-dark border border-brand-border rounded text-[11px] font-bold text-slate-300 hover:border-brand-neon">👦 Niño</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-4 pt-0">
-                            <button onclick="addSelectedToCart('${item.id}', '${club.name} - ${item.name}', '${item.file}', ${item.price})" class="w-full bg-brand-neon hover:bg-brand-neonHover text-black font-black uppercase text-xs py-2.5 rounded-xl transition-all flex items-center justify-center space-x-2">
-                                <i class="fa-solid fa-cart-plus text-sm"></i>
-                                <span>Añadir al Carrito</span>
-                            </button>
-                        </div>
-                    </div>
-                `;
-            });
+              <div class="mt-3 pt-2 border-t border-pitch-700/60 text-[10px] font-mono text-gray-500">
+                📁 ${prod.file}
+              </div>
+            </div>
+          </div>
 
-            html += `</div>`;
-            container.innerHTML = html;
+          <div class="p-5 pt-0 flex gap-2">
+            <button onclick="openProductModal('${prod.id}')" class="flex-1 py-2.5 rounded-xl bg-pitch-950 border border-pitch-700 hover:border-crackGreen text-xs font-stadium font-bold text-gray-300 hover:text-white transition">
+              Detalle
+            </button>
+            <button onclick="addToCart('${prod.id}', '${prod.name}', '${prod.file}')" class="px-4 py-2.5 rounded-xl bg-crackGreen-neon hover:bg-crackGreen text-pitch-950 text-xs font-stadium font-extrabold transition flex items-center justify-center gap-1.5 shadow-lg shadow-crackGreen/20">
+              <i class="fa-solid fa-cart-plus text-sm"></i> Añadir
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function selectCardSize(productId, size, btnElement) {
+      selectedSizesState[productId] = size;
+      const parent = btnElement.parentElement;
+      parent.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+      btnElement.classList.add('selected');
+    }
+
+    function setCategory(cat) {
+      activeCat = cat;
+
+      document.querySelectorAll('.cat-tab').forEach(tab => {
+        if (tab.dataset.cat === cat) {
+          tab.className = 'cat-tab px-4 py-2 rounded-xl text-xs font-stadium font-bold uppercase tracking-wider transition whitespace-nowrap bg-crackGreen-neon text-pitch-950';
+        } else {
+          tab.className = 'cat-tab px-4 py-2 rounded-xl text-xs font-stadium font-bold uppercase tracking-wider transition whitespace-nowrap bg-pitch-950 text-gray-300 border border-pitch-700 hover:border-crackGreen';
         }
+      });
 
-        function renderCustomGallery(container) {
-            let items = customItems;
-            if (searchQuery) items = items.filter(i => i.name.toLowerCase().includes(searchQuery));
+      filterProducts();
+    }
 
-            let html = `<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">`;
-            items.forEach(item => {
-                html += `
-                    <div class="bg-brand-card border border-brand-border rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-brand-neon transition-all">
-                        <div>
-                            <div class="w-full aspect-[4/5] bg-brand-dark relative overflow-hidden flex items-center justify-center p-2 cursor-pointer" onclick="openProductModal('${item.id}', 'Personalizados')">
-                                <img src="${item.file}" alt="${item.name}" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=400&auto=format&fit=crop&q=60'">
-                                <span class="absolute top-3 right-3 bg-brand-dark/80 backdrop-blur-md text-brand-neon text-[10px] font-black px-2.5 py-1 rounded-lg border border-brand-border">Custom</span>
-                            </div>
-                            <div class="p-4">
-                                <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1">CRACKS Deportes</span>
-                                <h3 class="text-white font-bold text-sm mb-1">${item.name}</h3>
-                                <div class="text-brand-neon font-black text-sm mb-3">$ ${item.price.toLocaleString('es-CO')} COP</div>
-                                
-                                <div class="mb-3">
-                                    <label class="text-[10px] uppercase font-bold text-slate-400 block mb-1.5">Talla:</label>
-                                    <div class="flex flex-wrap gap-1">
-                                        <button onclick="selectQuickSize(this, '${item.id}', 'Adulto S')" class="px-2 py-1 bg-brand-dark border border-brand-border rounded text-[11px] font-bold text-slate-300 hover:border-brand-neon">S</button>
-                                        <button onclick="selectQuickSize(this, '${item.id}', 'Adulto M')" class="px-2 py-1 bg-brand-dark border border-brand-border rounded text-[11px] font-bold text-slate-300 hover:border-brand-neon">M</button>
-                                        <button onclick="selectQuickSize(this, '${item.id}', 'Adulto L')" class="px-2 py-1 bg-brand-dark border border-brand-border rounded text-[11px] font-bold text-slate-300 hover:border-brand-neon">L</button>
-                                        <button onclick="selectQuickSize(this, '${item.id}', 'Adulto XL')" class="px-2 py-1 bg-brand-dark border border-brand-border rounded text-[11px] font-bold text-slate-300 hover:border-brand-neon">XL</button>
-                                        <button onclick="selectQuickSize(this, '${item.id}', 'Niño 12')" class="px-2 py-1 bg-brand-dark border border-brand-border rounded text-[11px] font-bold text-slate-300 hover:border-brand-neon">👦 Niño</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-4 pt-0">
-                            <button onclick="addSelectedToCart('${item.id}', '${item.name}', '${item.file}', ${item.price})" class="w-full bg-brand-neon hover:bg-brand-neonHover text-black font-black uppercase text-xs py-2.5 rounded-xl transition-all flex items-center justify-center space-x-2">
-                                <i class="fa-solid fa-cart-plus text-sm"></i>
-                                <span>Añadir al Carrito</span>
-                            </button>
-                        </div>
-                    </div>
-                `;
-            });
-            html += `</div>`;
-            container.innerHTML = html;
-        }
+    function filterProducts() {
+      const q = document.getElementById('searchInput') ? document.getElementById('searchInput').value.toLowerCase().trim() : '';
+      let filtered = catalogData;
 
-        function selectQuickSize(btn, itemId, size) {
-            const parent = btn.parentElement;
-            parent.querySelectorAll('button').forEach(b => {
-                b.classList.remove('bg-brand-neon', 'text-black', 'border-brand-neon');
-                b.classList.add('bg-brand-dark', 'text-slate-300', 'border-brand-border');
-            });
-            btn.classList.remove('bg-brand-dark', 'text-slate-300', 'border-brand-border');
-            btn.classList.add('bg-brand-neon', 'text-black', 'border-brand-neon');
-            selectedSizes[itemId] = size;
-        }
+      if (activeCat === 'destacados') {
+        filtered = catalogData.filter(p => p.isFeatured);
+      } else if (activeCat === 'nino') {
+        filtered = catalogData.filter(p => p.isKids);
+      } else if (activeCat === 'retro') {
+        filtered = catalogData.filter(p => p.season.includes('Retro'));
+      } else if (activeCat === 'personalizados') {
+        renderProducts(customItems);
+        return;
+      } else if (activeCat !== 'all') {
+        filtered = catalogData.filter(p => p.category === activeCat);
+      }
 
-        function addSelectedToCart(itemId, itemName, itemFile, price) {
-            const size = selectedSizes[itemId] === '👦 Niño' ? 'Niño 12 (Personalizar en WhatsApp)' : (selectedSizes[itemId] || 'Adulto M');
-            cart.push({ id: itemId, name: itemName, file: itemFile, size: size, price: price });
-            updateCartUI();
-            toggleCart();
-        }
+      if (q !== '') {
+        filtered = filtered.filter(p =>
+          p.name.toLowerCase().includes(q) ||
+          p.team.toLowerCase().includes(q) ||
+          p.desc.toLowerCase().includes(q) ||
+          p.file.toLowerCase().includes(q)
+        );
+      }
 
-        function toggleCart() {
-            document.getElementById('cartDrawer').classList.toggle('hidden');
-        }
+      renderProducts(filtered);
+    }
 
-        function updateCartUI() {
-            const badge = document.getElementById('cartBadge');
-            const list = document.getElementById('cartItemsList');
-            const totalElem = document.getElementById('cartTotalPrice');
+    function openProductModal(id) {
+      const prod = catalogData.find(p => p.id === id) || customItems.find(p => p.id === id);
+      if (!prod) return;
 
-            if (cart.length === 0) {
-                badge.classList.add('hidden');
-                badge.innerText = '0';
-                totalElem.innerText = '$ 0 COP';
-                list.innerHTML = `
-                    <div class="text-center py-12 text-slate-500">
-                        <i class="fa-solid fa-cart-shopping text-3xl mb-3"></i>
-                        <p class="text-xs">Tu carrito está vacío.</p>
-                    </div>
-                `;
-                return;
-            }
+      const sizesList = prod.isKids ? kidsSizes : adultSizes;
+      const currentSize = selectedSizesState[prod.id] || sizesList[0];
 
-            badge.classList.remove('hidden');
-            badge.innerText = cart.length;
+      const modalContent = document.getElementById('modalContent');
+      if (!modalContent) return;
 
-            let total = 0;
-            let html = '';
-            cart.forEach((item, index) => {
-                total += item.price;
-                html += `
-                    <div class="flex items-center space-x-4 bg-brand-dark p-3 rounded-xl border border-brand-border">
-                        <img src="${item.file}" class="w-16 h-16 object-contain bg-brand-card rounded-lg p-1 border border-brand-border" onerror="this.src='https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=400&auto=format&fit=crop&q=60'">
-                        <div class="flex-1">
-                            <h4 class="text-white font-bold text-xs">${item.name}</h4>
-                            <p class="text-[11px] text-brand-neon font-semibold mt-0.5">Talla: ${item.size}</p>
-                            <p class="text-xs text-white font-bold">$ ${item.price.toLocaleString('es-CO')} COP</p>
-                        </div>
-                        <button onclick="removeFromCart(${index})" class="text-slate-500 hover:text-red-500 p-2">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </button>
-                    </div>
-                `;
-            });
+      modalContent.innerHTML = `
+        <div class="text-center mb-4">
+          <span class="text-[10px] font-stadium font-bold text-crackGreen-neon uppercase tracking-widest bg-crackGreen/10 border border-crackGreen/30 px-3 py-1 rounded-full">
+            ${prod.season || 'Réplica Triple AAA'}
+          </span>
+          <h3 class="font-stadium font-black text-xl text-white mt-3 uppercase">${prod.name}</h3>
+          <p class="text-xs text-gray-400 font-mono">Archivo: ${prod.file}</p>
+        </div>
 
-            totalElem.innerText = `$ ${total.toLocaleString('es-CO')} COP`;
-            list.innerHTML = html;
-        }
+        <div class="bg-pitch-950 rounded-2xl overflow-hidden mb-4 border border-pitch-700 aspect-[4/3] flex items-center justify-center">
+          <img src="${prod.img}" alt="${prod.name}" class="w-full h-full object-cover">
+        </div>
 
-        function removeFromCart(index) {
-            cart.splice(index, 1);
-            updateCartUI();
-        }
+        <p class="text-xs text-gray-300 leading-relaxed mb-4">${prod.desc}</p>
 
-        function sendCartToWhatsApp() {
-            if (cart.length === 0) return;
+        <div class="bg-pitch-950 p-3.5 rounded-xl border border-pitch-700 mb-5">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xs font-stadium font-bold text-white uppercase">Talla Deseada:</span>
+            <button onclick="openSizeGuideModal()" class="text-[11px] text-crackGreen-neon underline font-bold">
+              Guía Tallas
+            </button>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            ${sizesList.map(sz => `
+              <button type="button" onclick="selectModalSize('${prod.id}', '${sz}', this)" class="modal-size-btn flex-1 py-1.5 rounded-lg bg-pitch-900 border border-pitch-700 text-xs font-bold text-white hover:border-crackGreen transition ${currentSize === sz ? 'bg-crackGreen-neon text-pitch-950 font-black' : ''}">
+                ${sz}
+              </button>
+            `).join('')}
+          </div>
+        </div>
 
-            let total = 0;
-            let message = `¡Hola CRACKS_deportes! ⚽ Quiero realizar el siguiente pedido desde el catálogo web (Bogotá):\n\n`;
-            cart.forEach((item, idx) => {
-                total += item.price;
-                message += `${idx + 1}. *${item.name}*\n   - Talla: ${item.size}\n   - Precio: $${item.price.toLocaleString('es-CO')} COP\n\n`;
-            });
-            message += `*TOTAL ESTIMADO:* $${total.toLocaleString('es-CO')} COP\n\nQuedo atento a la disponibilidad y confirmación del envío. ¡Gracias!`;
+        <div class="flex gap-3">
+          <button onclick="closeModal()" class="w-1/3 py-3 rounded-xl bg-pitch-950 border border-pitch-700 text-gray-300 font-stadium font-bold text-xs uppercase hover:bg-pitch-900 transition">
+            Cerrar
+          </button>
+          <button onclick="addToCart('${prod.id}', '${prod.name}', '${prod.file}'); closeModal();" class="w-2/3 py-3 rounded-xl bg-crackGreen-neon hover:bg-crackGreen text-pitch-950 font-stadium font-black text-xs uppercase tracking-wider transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-cart-plus text-base"></i> Añadir Talla <span id="modalSelectedTag">${currentSize}</span>
+          </button>
+        </div>
+      `;
 
-            const encoded = encodeURIComponent(message);
-            window.open(`https://wa.me/573123589030?text=${encoded}`, '_blank');
-        }
+      document.getElementById('productModal').classList.remove('hidden');
+    }
 
-        function openProductModal(itemId, clubName) {
-            const modal = document.getElementById('productModal');
-            const content = document.getElementById('modalContent');
-            
-            let item = null;
-            if (currentMainView === 'custom') {
-                item = customItems.find(i => i.id === itemId);
-            } else {
-                const allEntities = [...clubsData, ...selectionsData];
-                const club = allEntities.find(c => c.id === currentClubFolder);
-                if (club) item = club.items.find(i => i.id === itemId);
-            }
+    function selectModalSize(prodId, sz, btn) {
+      selectedSizesState[prodId] = sz;
+      document.querySelectorAll('.modal-size-btn').forEach(b => {
+        b.classList.remove('bg-crackGreen-neon', 'text-pitch-950', 'font-black');
+        b.classList.add('bg-pitch-900', 'text-white');
+      });
+      btn.classList.remove('bg-pitch-900', 'text-white');
+      btn.classList.add('bg-crackGreen-neon', 'text-pitch-950', 'font-black');
 
-            if (!item) return;
+      const modalTag = document.getElementById('modalSelectedTag');
+      if (modalTag) modalTag.innerText = sz;
+    }
 
-            content.innerHTML = `
-                <div class="bg-brand-dark rounded-xl p-4 flex items-center justify-center border border-brand-border aspect-square">
-                    <img src="${item.file}" alt="${item.name}" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=400&auto=format&fit=crop&q=60'">
-                </div>
-                <div>
-                    <span class="text-[10px] uppercase font-bold text-brand-neon tracking-wider block mb-1">${clubName}</span>
-                    <h2 class="text-xl font-black text-white mb-1">${item.name}</h2>
-                    <div class="text-brand-neon font-black text-lg mb-3">$ ${item.price.toLocaleString('es-CO')} COP</div>
-                    <p class="text-xs text-slate-400 mb-4">${item.description}</p>
-                    
-                    <div class="mb-4">
-                        <label class="text-xs uppercase font-bold text-white block mb-2">Selecciona Talla:</label>
-                        <div class="flex gap-2 mb-2">
-                            <button onclick="selectModalSize(this, 'Adulto S')" class="modal-size-btn px-3 py-1.5 bg-brand-dark border border-brand-border rounded-lg text-xs font-bold text-white hover:border-brand-neon">S</button>
-                            <button onclick="selectModalSize(this, 'Adulto M')" class="modal-size-btn px-3 py-1.5 bg-brand-dark border border-brand-border rounded-lg text-xs font-bold text-white hover:border-brand-neon">M</button>
-                            <button onclick="selectModalSize(this, 'Adulto L')" class="modal-size-btn px-3 py-1.5 bg-brand-dark border border-brand-border rounded-lg text-xs font-bold text-white hover:border-brand-neon">L</button>
-                            <button onclick="selectModalSize(this, 'Adulto XL')" class="modal-size-btn px-3 py-1.5 bg-brand-dark border border-brand-border rounded-lg text-xs font-bold text-white hover:border-brand-neon">XL</button>
-                        </div>
-                    </div>
+    function openCustomModal(c) {
+      openProductModal(c.id);
+    }
 
-                    <button onclick="addModalItemToCart('${item.id}', '${clubName} - ${item.name}', '${item.file}', ${item.price})" class="w-full bg-brand-neon hover:bg-brand-neonHover text-black font-black uppercase text-xs py-3 rounded-xl transition-all shadow-lg flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-cart-plus text-sm"></i>
-                        <span>Añadir al Carrito</span>
-                    </button>
-                </div>
-            `;
+    function closeModal() {
+      const modal = document.getElementById('productModal');
+      if (modal) modal.classList.add('hidden');
+    }
 
-            modal.classList.remove('hidden');
-        }
+    function openSizeGuideModal() {
+      const sizeModal = document.getElementById('sizeGuideModal');
+      if (sizeModal) sizeModal.classList.remove('hidden');
+    }
 
-        let modalSelectedSize = 'Adulto M';
-        function selectModalSize(btn, size) {
-            document.querySelectorAll('.modal-size-btn').forEach(b => {
-                b.classList.remove('bg-brand-neon', 'text-black', 'border-brand-neon');
-                b.classList.add('bg-brand-dark', 'text-white', 'border-brand-border');
-            });
-            btn.classList.remove('bg-brand-dark', 'text-white', 'border-brand-border');
-            btn.classList.add('bg-brand-neon', 'text-black', 'border-brand-neon');
-            modalSelectedSize = size;
-        }
+    function closeSizeGuideModal() {
+      const sizeModal = document.getElementById('sizeGuideModal');
+      if (sizeModal) sizeModal.classList.add('hidden');
+    }
 
-        function addModalItemToCart(itemId, itemName, itemFile, price) {
-            cart.push({ id: itemId, name: itemName, file: itemFile, size: modalSelectedSize, price: price });
-            closeProductModal();
-            updateCartUI();
-            toggleCart();
-        }
+    /* CART MANAGEMENT LOGIC */
+    function addToCart(id, name, file) {
+      const size = selectedSizesState[id] || 'Por definir';
+      cartList.push({ id, name, file, size });
+      updateCartUI();
+    }
 
-        function closeProductModal() {
-            document.getElementById('productModal').classList.add('hidden');
-        }
+    function removeFromCart(index) {
+      cartList.splice(index, 1);
+      updateCartUI();
+    }
 
-        function openSizeGuide() {
-            document.getElementById('sizeGuideModal').classList.remove('hidden');
-        }
+    function updateCartUI() {
+      const badge = document.getElementById('cartCountBadge');
+      if (badge) badge.innerText = cartList.length;
 
-        function closeSizeGuide() {
-            document.getElementById('sizeGuideModal').classList.add('hidden');
-        }
-    </script>
+      const cartItemsContainer = document.getElementById('cartDrawerItems');
+      if (!cartItemsContainer) return;
+
+      if (cartList.length === 0) {
+        cartItemsContainer.innerHTML = `
+          <div class="text-center py-10 text-gray-500">
+            <i class="fa-solid fa-cart-flatbed text-4xl mb-2"></i>
+            <p class="text-xs font-stadium">Tu pedido está vacío</p>
+          </div>
+        `;
+        return;
+      }
+
+      cartItemsContainer.innerHTML = '';
+      cartList.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'bg-pitch-950 p-3 rounded-xl border border-pitch-700 flex items-center justify-between gap-3';
+        div.innerHTML = `
+          <div class="flex-1 min-w-0">
+            <h4 class="text-xs font-stadium font-bold text-white truncate">${item.name}</h4>
+            <div class="text-[10px] text-crackGreen-neon font-mono mt-0.5">Talla: <strong>${item.size}</strong> | Ref: ${item.file}</div>
+          </div>
+          <button onclick="removeFromCart(${index})" class="text-gray-500 hover:text-red-400 p-1">
+            <i class="fa-solid fa-trash-can text-xs"></i>
+          </button>
+        `;
+        cartItemsContainer.appendChild(div);
+      });
+    }
+
+    function toggleCartDrawer() {
+      const drawer = document.getElementById('cartDrawer');
+      if (drawer) drawer.classList.toggle('translate-x-full');
+    }
+
+    function sendCartToWhatsApp() {
+      if (cartList.length === 0) return;
+
+      let msg = `Hola CRACKS_deportes, me gustaría realizar el pedido de los siguientes uniformes:\n\n`;
+      cartList.forEach((item, idx) => {
+        msg += `${idx + 1}. *${item.name}*\n   • Talla: *${item.size}*\n   • Ref: ${item.file}\n\n`;
+      });
+      msg += `Quedo atento a la confirmación de inventario y datos para entrega o despacho. ¡Gracias!`;
+
+      window.open(`https://wa.me/573123589030?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+  </script>
 </body>
 </html>
